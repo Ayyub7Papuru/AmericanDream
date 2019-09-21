@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B152BCC9232A564E00CC9216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152BCC8232A564E00CC9216 /* AppDelegate.swift */; };
+		B152BCCE232A564E00CC9216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B152BCCC232A564E00CC9216 /* Main.storyboard */; };
+		B152BCD0232A565000CC9216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B152BCCF232A565000CC9216 /* Assets.xcassets */; };
+		B152BCD3232A565000CC9216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B152BCD1232A565000CC9216 /* LaunchScreen.storyboard */; };
+		B152BCDB232A56D400CC9216 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152BCDA232A56D400CC9216 /* CurrenciesViewController.swift */; };
+		B152BCDD232A638A00CC9216 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152BCDC232A638A00CC9216 /* TranslationViewController.swift */; };
+		B152BCDF232A657500CC9216 /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152BCDE232A657500CC9216 /* CurrencyService.swift */; };
+		B17C9EFF2336440000D7BF55 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C9EFE2336440000D7BF55 /* Rates.swift */; };
+		B17C9F012336464A00D7BF55 /* RatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C9F002336464A00D7BF55 /* RatesService.swift */; };
+		B17C9F03233692E900D7BF55 /* RatesDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C9F02233692E900D7BF55 /* RatesDisplayViewController.swift */; };
+		B1902EDF23327868000CA502 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1902EDE23327868000CA502 /* Symbols.swift */; };
+		B1F94994232FEAA0007F71D1 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F94993232FEAA0007F71D1 /* WeatherViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B152BCC5232A564E00CC9216 /* LeBaluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeBaluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B152BCC8232A564E00CC9216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B152BCCD232A564E00CC9216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B152BCCF232A565000CC9216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B152BCD2232A565000CC9216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B152BCD4232A565000CC9216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B152BCDA232A56D400CC9216 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
+		B152BCDC232A638A00CC9216 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
+		B152BCDE232A657500CC9216 /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
+		B17C9EFE2336440000D7BF55 /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
+		B17C9F002336464A00D7BF55 /* RatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesService.swift; sourceTree = "<group>"; };
+		B17C9F02233692E900D7BF55 /* RatesDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesDisplayViewController.swift; sourceTree = "<group>"; };
+		B1902EDE23327868000CA502 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		B1F94993232FEAA0007F71D1 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B152BCC2232A564E00CC9216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B152BCBC232A564E00CC9216 = {
+			isa = PBXGroup;
+			children = (
+				B152BCC7232A564E00CC9216 /* LeBaluchon */,
+				B152BCC6232A564E00CC9216 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B152BCC6232A564E00CC9216 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B152BCC5232A564E00CC9216 /* LeBaluchon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B152BCC7232A564E00CC9216 /* LeBaluchon */ = {
+			isa = PBXGroup;
+			children = (
+				B152BCE0232FE04F00CC9216 /* Model */,
+				B152BCE1232FE05C00CC9216 /* View */,
+				B152BCE2232FE06400CC9216 /* Controller */,
+				B152BCE3232FE09E00CC9216 /* Supporting files */,
+			);
+			path = LeBaluchon;
+			sourceTree = "<group>";
+		};
+		B152BCE0232FE04F00CC9216 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B152BCDE232A657500CC9216 /* CurrencyService.swift */,
+				B1902EDE23327868000CA502 /* Symbols.swift */,
+				B17C9EFE2336440000D7BF55 /* Rates.swift */,
+				B17C9F002336464A00D7BF55 /* RatesService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B152BCE1232FE05C00CC9216 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B152BCCC232A564E00CC9216 /* Main.storyboard */,
+				B152BCD1232A565000CC9216 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B152BCE2232FE06400CC9216 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B152BCDA232A56D400CC9216 /* CurrenciesViewController.swift */,
+				B152BCDC232A638A00CC9216 /* TranslationViewController.swift */,
+				B1F94993232FEAA0007F71D1 /* WeatherViewController.swift */,
+				B17C9F02233692E900D7BF55 /* RatesDisplayViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B152BCE3232FE09E00CC9216 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				B152BCCF232A565000CC9216 /* Assets.xcassets */,
+				B152BCC8232A564E00CC9216 /* AppDelegate.swift */,
+				B152BCD4232A565000CC9216 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B152BCC4232A564E00CC9216 /* LeBaluchon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B152BCD7232A565000CC9216 /* Build configuration list for PBXNativeTarget "LeBaluchon" */;
+			buildPhases = (
+				B152BCC1232A564E00CC9216 /* Sources */,
+				B152BCC2232A564E00CC9216 /* Frameworks */,
+				B152BCC3232A564E00CC9216 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeBaluchon;
+			productName = LeBaluchon;
+			productReference = B152BCC5232A564E00CC9216 /* LeBaluchon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B152BCBD232A564E00CC9216 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "sayajin papuru";
+				TargetAttributes = {
+					B152BCC4232A564E00CC9216 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = B152BCC0232A564E00CC9216 /* Build configuration list for PBXProject "LeBaluchon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B152BCBC232A564E00CC9216;
+			productRefGroup = B152BCC6232A564E00CC9216 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B152BCC4232A564E00CC9216 /* LeBaluchon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B152BCC3232A564E00CC9216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B152BCD3232A565000CC9216 /* LaunchScreen.storyboard in Resources */,
+				B152BCD0232A565000CC9216 /* Assets.xcassets in Resources */,
+				B152BCCE232A564E00CC9216 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B152BCC1232A564E00CC9216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B17C9F03233692E900D7BF55 /* RatesDisplayViewController.swift in Sources */,
+				B152BCC9232A564E00CC9216 /* AppDelegate.swift in Sources */,
+				B1F94994232FEAA0007F71D1 /* WeatherViewController.swift in Sources */,
+				B1902EDF23327868000CA502 /* Symbols.swift in Sources */,
+				B152BCDB232A56D400CC9216 /* CurrenciesViewController.swift in Sources */,
+				B17C9EFF2336440000D7BF55 /* Rates.swift in Sources */,
+				B17C9F012336464A00D7BF55 /* RatesService.swift in Sources */,
+				B152BCDD232A638A00CC9216 /* TranslationViewController.swift in Sources */,
+				B152BCDF232A657500CC9216 /* CurrencyService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B152BCCC232A564E00CC9216 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B152BCCD232A564E00CC9216 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B152BCD1232A565000CC9216 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B152BCD2232A565000CC9216 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B152BCD5232A565000CC9216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B152BCD6232A565000CC9216 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B152BCD8232A565000CC9216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ST64UKQV4;
+				INFOPLIST_FILE = "$(SRCROOT)/LeBaluchon/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SayajinPapuru.LeBaluchon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B152BCD9232A565000CC9216 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ST64UKQV4;
+				INFOPLIST_FILE = "$(SRCROOT)/LeBaluchon/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SayajinPapuru.LeBaluchon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B152BCC0232A564E00CC9216 /* Build configuration list for PBXProject "LeBaluchon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B152BCD5232A565000CC9216 /* Debug */,
+				B152BCD6232A565000CC9216 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B152BCD7232A565000CC9216 /* Build configuration list for PBXNativeTarget "LeBaluchon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B152BCD8232A565000CC9216 /* Debug */,
+				B152BCD9232A565000CC9216 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B152BCBD232A564E00CC9216 /* Project object */;
+}
