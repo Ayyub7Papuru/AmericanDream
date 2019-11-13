@@ -8,18 +8,26 @@
 
 import UIKit
 
+
 class CurrenciesViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    let currency = CurrencyService()
+    let currencyService = CurrencyService()
     let ratesService = RatesService()
     var rates = [Double]()
     var ratesNames = [String]()
-    var symbols = [String]()
-    var currenciesNames = [String]()
+    var symbols = [String]() {
+        didSet {
+            symbols.sort(by: <)
+            currenciesPickerView.reloadAllComponents()
+        }
+    }
     
+    var currenciesNames = [String]()
+    var currency = "AED"
     
     @IBOutlet weak var moneyAmountTextField: UITextField!
     @IBOutlet weak var currenciesPickerView: UIPickerView!
+    @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,41 +36,31 @@ class CurrenciesViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     @IBAction func convertButton(_ sender: UIButton) {
-        ratesService.getRates { (success, rates) in
+        ratesService.getRates(currency: currency) { (success, rates) in
             if success {
-                for (k, v) in rates! {
-                    self.rates.append(v)
-                    self.ratesNames.append(k)
-                }
-                print(self.rates)
+                
+                guard let rates = rates else { return }
+                guard let stringAmount = self.moneyAmountTextField.text else { return }
+                guard let amount = Double(stringAmount) else { return }
+                guard let rate = rates[self.currency] else { return }
+                let result = amount * rate
+                self.resultLabel.text = String("\(result)")
+    
             }
+            
         }
     }
 
-//    func loadDataRates() {
-//        ratesService.getRates { (success, rates) in
-//            if success {
-//
-//                for (key, value) in rates! {
-//                    self.ratesNames.append(key)
-//                    self.rates.append(value)
-//                }
-//            }
-//        }
-//    }
+
+    
+   
     
     
     func loadDataSymbols() {
-        currency.getCurrencies { (success, symbols) in
-            if success {
-                for (key, value) in symbols! {
-                    self.symbols.append(key)
-                    self.currenciesNames.append(value)
-                }
-                DispatchQueue.main.async {
-                     self.currenciesPickerView.reloadAllComponents()
-                }
-            }
+        currencyService.getCurrencies { (symbols) in
+            guard let symbols = symbols else { return }
+            self.symbols = symbols
+            
         }
     }
     
@@ -71,10 +69,16 @@ class CurrenciesViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.symbols.count
+        return symbols.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.symbols[row]
+    
+        return symbols[row]
+    
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currency = symbols[row]
     }
 }

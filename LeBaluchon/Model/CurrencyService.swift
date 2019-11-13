@@ -21,33 +21,40 @@ class CurrencyService {
     }
 
     
-    func getCurrencies(callback: @escaping (Bool, [String: String]?) -> Void) {
+    func getCurrencies(callback: @escaping ([String]?) -> Void) {
         guard let currenciesURL = currenciesURL else { return }
         
         task?.cancel()
         
         task = sessionSymbols?.dataTask(with: currenciesURL, completionHandler: { (data, response, error) in
-            guard let data = data, error == nil else {
-                callback(false, nil)
-                return
+            DispatchQueue.main.async {
+                guard let data = data, error == nil else {
+                    callback(nil)
+                    return
+                }
+                
+                
+                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                    callback(nil)
+                    return
+                }
+                
+                
+                guard let responseJSON = try? JSONDecoder().decode(Symbols.self, from: data) else {
+                    callback(nil)
+                    return
+                }
+                
+                var symbols = [String]()
+                responseJSON.symbols.forEach({ (key, value) in
+                    symbols.append(key)
+                })
+                
+                callback(symbols)
             }
-            
-            
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                callback(false, nil)
-                return
-            }
-            
-    
-            guard let responseJSON = try? JSONDecoder().decode(Symbols.self, from: data) else {
-                callback(false, nil)
-                return
-            }
-            
-            
-            
-            callback(true, responseJSON.symbols)
-        })
+            })
+
+
         task?.resume()
     }
 

@@ -9,6 +9,15 @@
 import UIKit
 
 class WeatherViewController: UIViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var weatherConditionsLabel: UILabel!
+    @IBOutlet weak var weatherConditionImageView: UIImageView!
+    @IBOutlet weak var currentTemperatureLabel: UILabel!
+    @IBOutlet weak var newyorkWeatherConditionsLabel: UILabel!
+    @IBOutlet weak var newyorkWeatherConditionsImageView: UIImageView!
+    @IBOutlet weak var newyorkCurrentTempLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +33,7 @@ class WeatherViewController: UIViewController, UISearchBarDelegate {
         searchBar.placeholder = "Entrez la ville de votre choix..."
         searchBar.delegate = self
         
-        self.navigationItem.titleView = searchBar
+        navigationItem.titleView = searchBar
     }
 
 

@@ -16,8 +16,9 @@
 		B152BCDF232A657500CC9216 /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152BCDE232A657500CC9216 /* CurrencyService.swift */; };
 		B17C9EFF2336440000D7BF55 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C9EFE2336440000D7BF55 /* Rates.swift */; };
 		B17C9F012336464A00D7BF55 /* RatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C9F002336464A00D7BF55 /* RatesService.swift */; };
-		B17C9F03233692E900D7BF55 /* RatesDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C9F02233692E900D7BF55 /* RatesDisplayViewController.swift */; };
 		B1902EDF23327868000CA502 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1902EDE23327868000CA502 /* Symbols.swift */; };
+		B199D910237C6DAC00702AE7 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199D90F237C6DAC00702AE7 /* Weather.swift */; };
+		B199D912237C6E0E00702AE7 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199D911237C6E0E00702AE7 /* WeatherService.swift */; };
 		B1F94994232FEAA0007F71D1 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F94993232FEAA0007F71D1 /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +34,9 @@
 		B152BCDE232A657500CC9216 /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 		B17C9EFE2336440000D7BF55 /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
 		B17C9F002336464A00D7BF55 /* RatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesService.swift; sourceTree = "<group>"; };
-		B17C9F02233692E900D7BF55 /* RatesDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesDisplayViewController.swift; sourceTree = "<group>"; };
 		B1902EDE23327868000CA502 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		B199D90F237C6DAC00702AE7 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		B199D911237C6E0E00702AE7 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		B1F94993232FEAA0007F71D1 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,8 @@
 				B152BCDE232A657500CC9216 /* CurrencyService.swift */,
 				B1902EDE23327868000CA502 /* Symbols.swift */,
 				B17C9EFE2336440000D7BF55 /* Rates.swift */,
+				B199D90F237C6DAC00702AE7 /* Weather.swift */,
+				B199D911237C6E0E00702AE7 /* WeatherService.swift */,
 				B17C9F002336464A00D7BF55 /* RatesService.swift */,
 			);
 			path = Model;
@@ -102,7 +106,6 @@
 				B152BCDA232A56D400CC9216 /* CurrenciesViewController.swift */,
 				B152BCDC232A638A00CC9216 /* TranslationViewController.swift */,
 				B1F94993232FEAA0007F71D1 /* WeatherViewController.swift */,
-				B17C9F02233692E900D7BF55 /* RatesDisplayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,11 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B17C9F03233692E900D7BF55 /* RatesDisplayViewController.swift in Sources */,
+				B199D912237C6E0E00702AE7 /* WeatherService.swift in Sources */,
 				B152BCC9232A564E00CC9216 /* AppDelegate.swift in Sources */,
 				B1F94994232FEAA0007F71D1 /* WeatherViewController.swift in Sources */,
 				B1902EDF23327868000CA502 /* Symbols.swift in Sources */,
 				B152BCDB232A56D400CC9216 /* CurrenciesViewController.swift in Sources */,
+				B199D910237C6DAC00702AE7 /* Weather.swift in Sources */,
 				B17C9EFF2336440000D7BF55 /* Rates.swift in Sources */,
 				B17C9F012336464A00D7BF55 /* RatesService.swift in Sources */,
 				B152BCDD232A638A00CC9216 /* TranslationViewController.swift in Sources */,
