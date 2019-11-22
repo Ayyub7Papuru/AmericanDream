@@ -17,9 +17,9 @@ class WeatherService {
     init(sessionWeather: URLSession = URLSession(configuration: .default)) {
         self.sessionWeather = sessionWeather
     }
-    
-    func getNYWeather(city: String, callback: @escaping (Bool, Weather?) -> Void) {
-        guard let weatherURL = URL(string: "api.openweathermap.org/data/2.5/weather?q=New York&units=metric&APPID=2b0978f7eb83aba545a261d96c545f12")  else { return }
+    //ResultType
+    func getNYWeather(callback: @escaping (Bool, WeatherData?) -> Void) {
+        guard let weatherURL = URL(string: "http://api.openweathermap.org/data/2.5/group?id=5128581, 2972315&units=metric&APPID=2b0978f7eb83aba545a261d96c545f12")  else { return }
         
       task?.cancel()
             
@@ -37,7 +37,7 @@ class WeatherService {
                         return
                     }
                     
-                    guard let responseJSON = try? JSONDecoder().decode(Weather.self, from: data) else {
+                    guard let responseJSON = try? JSONDecoder().decode(WeatherData.self, from: data) else {
                         callback(false, nil)
                         return
                     }

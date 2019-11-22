@@ -11,7 +11,6 @@ import UIKit
 class WeatherViewController: UIViewController, UISearchBarDelegate {
     
     let weatherService = WeatherService()
-    var city = "New York"
     
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var weatherConditionsLabel: UILabel!
@@ -24,19 +23,12 @@ class WeatherViewController: UIViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        createSearchBar()
-    }
+            weatherService.getNYWeather { (success, weatherData) in
+            
+            }
+        
+        }
     
-    func createSearchBar()  {
-        
-        let searchBar = UISearchBar()
-        
-        searchBar.showsCancelButton = false
-        searchBar.placeholder = "Entrez la ville de votre choix..."
-        searchBar.delegate = self
-        
-        navigationItem.titleView = searchBar
-    }
     
 
 
