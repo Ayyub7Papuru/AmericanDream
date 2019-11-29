@@ -280,22 +280,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="DGB-Iz-wpU">
-                                <rect key="frame" x="90" y="108.00000000000003" width="195" height="472.66666666666674"/>
+                                <rect key="frame" x="90" y="107.99999999999997" width="192" height="460.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LHV-Sh-TXR">
-                                        <rect key="frame" x="25.666666666666671" y="0.0" width="144" height="190"/>
+                                        <rect key="frame" x="28.333333333333329" y="0.0" width="135.66666666666669" height="190"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="NJO-wg-asN">
-                                                <rect key="frame" x="0.0" y="0.0" width="144" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Bali, Indonésie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-Dc-oFb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="144" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="28"/>
                                                         <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ensoleillé" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6os-Im-Gc3">
-                                                        <rect key="frame" x="0.0" y="52" width="144" height="28"/>
+                                                        <rect key="frame" x="0.0" y="52" width="135.66666666666666" height="28"/>
                                                         <fontDescription key="fontDescription" name="KohinoorTelugu-Light" family="Kohinoor Telugu" pointSize="20"/>
                                                         <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
@@ -303,14 +303,11 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="0Ii-ag-l6E">
-                                                <rect key="frame" x="0.0" y="110" width="144" height="80"/>
+                                                <rect key="frame" x="0.0" y="110" width="135.66666666666666" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="Sunny" translatesAutoresizingMaskIntoConstraints="NO" id="MhQ-mQ-b9N">
-                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="80"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbq-oQ-12p">
-                                                        <rect key="frame" x="52.999999999999986" y="0.0" width="91.000000000000014" height="80"/>
-                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="60"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbq-oQ-12p">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="80"/>
+                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="50"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -319,7 +316,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="xHW-9H-d32">
-                                        <rect key="frame" x="1.6666666666666714" y="280" width="192" height="192.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="280" width="192" height="180.33333333333337"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="85z-wJ-1Tu">
                                                 <rect key="frame" x="0.0" y="0.0" width="192" height="81"/>
@@ -331,7 +328,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Averse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtl-C4-c2n">
-                                                        <rect key="frame" x="66.999999999999986" y="53" width="57.666666666666671" height="28"/>
+                                                        <rect key="frame" x="67.333333333333343" y="53" width="57.666666666666657" height="28"/>
                                                         <fontDescription key="fontDescription" name="KohinoorTelugu-Light" family="Kohinoor Telugu" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -339,16 +336,11 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="w1C-9W-Y3o">
-                                                <rect key="frame" x="24" y="119" width="144" height="73.666666666666686"/>
+                                                <rect key="frame" x="68.333333333333343" y="118.99999999999999" width="55.666666666666657" height="61.333333333333329"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rainy" translatesAutoresizingMaskIntoConstraints="NO" id="nfo-gu-Bzh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="73.666666666666671"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnM-lc-jjc">
-                                                        <rect key="frame" x="52.999999999999986" y="0.0" width="91.000000000000014" height="73.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="60"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnM-lc-jjc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55.666666666666664" height="61.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="50"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -361,7 +353,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.2713810196" green="0.2713810196" blue="0.2713810196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="DGB-Iz-wpU" firstAttribute="centerX" secondItem="obE-4m-p3Z" secondAttribute="centerX" id="dQK-zY-MH1"/>
                             <constraint firstItem="DGB-Iz-wpU" firstAttribute="top" secondItem="Aw6-HG-gz3" secondAttribute="top" constant="20" id="kil-o4-Rqb"/>
                             <constraint firstItem="DGB-Iz-wpU" firstAttribute="leading" secondItem="Aw6-HG-gz3" secondAttribute="leading" constant="90" id="xto-xa-lK8"/>
                         </constraints>
@@ -371,10 +362,9 @@
                     <connections>
                         <outlet property="cityLabel" destination="jqa-Dc-oFb" id="Su0-tA-koO"/>
                         <outlet property="currentTemperatureLabel" destination="Rbq-oQ-12p" id="7rc-RR-iHt"/>
+                        <outlet property="newyorkCityLabel" destination="IFQ-ke-FBo" id="pHT-uq-ETc"/>
                         <outlet property="newyorkCurrentTempLabel" destination="gnM-lc-jjc" id="vVa-qB-WZI"/>
-                        <outlet property="newyorkWeatherConditionsImageView" destination="nfo-gu-Bzh" id="1nC-EP-cXk"/>
                         <outlet property="newyorkWeatherConditionsLabel" destination="Wtl-C4-c2n" id="UGY-Fe-Lqn"/>
-                        <outlet property="weatherConditionImageView" destination="MhQ-mQ-b9N" id="cE5-Zf-gbZ"/>
                         <outlet property="weatherConditionsLabel" destination="6os-Im-Gc3" id="EEU-ig-rGq"/>
                     </connections>
                 </viewController>
@@ -386,8 +376,6 @@
     <resources>
         <image name="Exchange" width="32" height="32"/>
         <image name="Money" width="16" height="32"/>
-        <image name="Rainy" width="32" height="32"/>
-        <image name="Sunny" width="32" height="32"/>
         <image name="Translate" width="32" height="32"/>
         <image name="Weather" width="32" height="32"/>
     </resources>
