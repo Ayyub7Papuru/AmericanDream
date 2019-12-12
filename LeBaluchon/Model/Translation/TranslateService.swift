@@ -18,18 +18,9 @@ class TranslateService {
         self.sessionTranslation = sessionTranslation
     }
     
-    func translateText(text: String, url: URL) -> URLRequest {
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        
-        let body = "q=" + text
-        request.httpBody = body.data(using: .utf8)
-        
-        return request
-    }
-    
-    func translationRequest(text: String, callback: @escaping (Bool, TranslateData?) -> Void) { //Formater string pour le navigateur avec url
-        guard let translateURL = URL(string: "https://translation.googleapis.com/language/translate/v2") else { return }
+    func translationRequest(text: String, target: String, source: String, callback: @escaping (Bool, TranslateData?) -> Void) { //Formater string pour le navigateur avec url
+        guard let textEncoded = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        guard let translateURL = URL(string: "https://www.googleapis.com/language/translate/v2?key=AIzaSyBKuHgCc35F06OCKRw09-yUEjdTbO4lBTw&format=text&q=\(textEncoded)&source=\(source)&target=\(target)") else { return }
         
        
         task?.cancel()
@@ -46,7 +37,7 @@ class TranslateService {
                 return
             }
             
-            guard let responseJSON = try? JSONDecoder().decode(TranslateData?.self, from: data) else {
+            guard let responseJSON = try? JSONDecoder().decode(TranslateData.self, from: data) else {
                 callback(false, nil)
                 return
             }

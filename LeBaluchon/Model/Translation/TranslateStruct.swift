@@ -22,7 +22,7 @@ struct DataClass: Decodable {
 
 // MARK: - Translation
 struct Translation: Decodable {
-    let translatedText, detectedSourceLanguage: String
+    let translatedText: String
 }
 
 

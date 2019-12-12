@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B105394D2398195700E0529B /* TranslateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B105394C2398195700E0529B /* TranslateService.swift */; };
-		B106258723A0222100A43683 /* SwiftSlug.swift in Sources */ = {isa = PBXBuildFile; fileRef = B106258623A0222100A43683 /* SwiftSlug.swift */; };
 		B152BCC9232A564E00CC9216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152BCC8232A564E00CC9216 /* AppDelegate.swift */; };
 		B152BCCE232A564E00CC9216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B152BCCC232A564E00CC9216 /* Main.storyboard */; };
 		B152BCD0232A565000CC9216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B152BCCF232A565000CC9216 /* Assets.xcassets */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		B105394C2398195700E0529B /* TranslateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateService.swift; sourceTree = "<group>"; };
-		B106258623A0222100A43683 /* SwiftSlug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSlug.swift; sourceTree = "<group>"; };
 		B152BCC5232A564E00CC9216 /* LeBaluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeBaluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B152BCC8232A564E00CC9216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B152BCCD232A564E00CC9216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			children = (
 				B105394C2398195700E0529B /* TranslateService.swift */,
 				B1D8CB7C2399B76700F01680 /* TranslateStruct.swift */,
-				B106258623A0222100A43683 /* SwiftSlug.swift */,
 			);
 			path = Translation;
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 				B17C9EFF2336440000D7BF55 /* Rates.swift in Sources */,
 				B17C9F012336464A00D7BF55 /* RatesService.swift in Sources */,
 				B152BCDD232A638A00CC9216 /* TranslationViewController.swift in Sources */,
-				B106258723A0222100A43683 /* SwiftSlug.swift in Sources */,
 				B152BCDF232A657500CC9216 /* CurrencyService.swift in Sources */,
 				B1D8CB7D2399B76700F01680 /* TranslateStruct.swift in Sources */,
 			);

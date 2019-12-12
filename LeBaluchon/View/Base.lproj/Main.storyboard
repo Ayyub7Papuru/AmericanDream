@@ -66,7 +66,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkM-Y8-ABr">
                                 <rect key="frame" x="20" y="664" width="335" height="50"/>
-                                <color key="backgroundColor" red="0.40392156862745099" green="0.90196078431372551" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.25490196079999999" green="0.69411764710000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mLq-0S-BpL"/>
                                 </constraints>
@@ -204,7 +204,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR8-Ak-lQL">
                                         <rect key="frame" x="233.33333333333334" y="0.0" width="101.66666666666666" height="50"/>
                                         <color key="backgroundColor" red="0.25423862429999999" green="0.69397905609999999" blue="0.32299395310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Anglais">
+                                        <state key="normal" title="Turc">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
@@ -237,7 +237,7 @@
                                 <rect key="frame" x="20" y="664" width="335" height="45"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.69411764710000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="TRANSLATE">
+                                <state key="normal" title="Translate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -262,6 +262,9 @@
                     <navigationItem key="navigationItem" title="Translate" id="NSW-fQ-XEl"/>
                     <connections>
                         <outlet property="entryTextView" destination="R3f-Ra-L4P" id="ntm-nI-lMD"/>
+                        <outlet property="exchangeLanguageButton" destination="sRb-79-hUo" id="MLJ-uM-dxS"/>
+                        <outlet property="sourceLanguageButton" destination="plp-KL-tog" id="MJt-f1-Vit"/>
+                        <outlet property="targetLanguageButton" destination="AR8-Ak-lQL" id="zpe-Mj-4xq"/>
                         <outlet property="translatedLabel" destination="syG-bm-398" id="FYt-zt-nfK"/>
                     </connections>
                 </viewController>
