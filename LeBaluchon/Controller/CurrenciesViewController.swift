@@ -12,7 +12,6 @@ import UIKit
 class CurrenciesViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     let currencyService = CurrencyService()
-    let ratesService = RatesService()
     var rates = [Double]()
     var ratesNames = [String]()
     var symbols = [String]() {
@@ -36,7 +35,7 @@ class CurrenciesViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     @IBAction func convertButton(_ sender: UIButton) {
-        ratesService.getRates(currency: currency) { (success, rates) in
+        currencyService.getRates(currency: currency) { (success, rates) in
             if success {
                 
                 guard let rates = rates else { return }

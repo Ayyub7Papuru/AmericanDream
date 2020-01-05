@@ -2,8 +2,8 @@
 //  Rates.swift
 //  LeBaluchon
 //
-//  Created by SayajinPapuru on 21/09/2019.
-//  Copyright © 2019 sayajin papuru. All rights reserved.
+//  Created by SayajinPapuru on 05/01/2020.
+//  Copyright © 2020 sayajin papuru. All rights reserved.
 //
 
 import Foundation
