@@ -57,11 +57,15 @@ class CurrenciesViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     
     func loadDataSymbols() {
-        currencyService.getCurrencies { (symbols) in
-            guard let symbols = symbols else { return }
-            self.symbols = symbols
-            
+        currencyService.getCurrencies { (result) in
+            switch result {
+            case .success(let currencies):
+                self.symbols = currencies
+            case .failure(let error):
+                print(error)
+            }
         }
+
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

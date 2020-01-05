@@ -8,12 +8,18 @@
 
 import Foundation
 
+enum NetWorkError: Error {
+    case noData
+    case noResponse
+    case noDecode
+}
+
 class CurrencyService {
     
     private let currenciesURL = URL(string: "http://data.fixer.io/api/symbols?access_key=9954839ad756dc9d57ee72e16510a446")
    
     
-    var sessionSymbols: URLSession?
+    var sessionSymbols = URLSession(configuration: .default)
     var task: URLSessionTask?
     
     init(sessionSymbols: URLSession = URLSession(configuration: .default)) {
@@ -21,27 +27,27 @@ class CurrencyService {
     }
 
     
-    func getCurrencies(callback: @escaping ([String]?) -> Void) {
+    func getCurrencies(callback: @escaping (Result<[String], Error>) -> Void) {
         guard let currenciesURL = currenciesURL else { return }
         
         task?.cancel()
         
-        task = sessionSymbols?.dataTask(with: currenciesURL, completionHandler: { (data, response, error) in
+        task = sessionSymbols.dataTask(with: currenciesURL, completionHandler: { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
-                    callback(nil)
+                    callback(.failure(NetWorkError.noData))
                     return
                 }
                 
                 
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    callback(nil)
+                    callback(.failure(NetWorkError.noResponse))
                     return
                 }
                 
                 
                 guard let responseJSON = try? JSONDecoder().decode(Symbols.self, from: data) else {
-                    callback(nil)
+                    callback(.failure(NetWorkError.noDecode))
                     return
                 }
                 
@@ -50,7 +56,7 @@ class CurrencyService {
                     symbols.append(key)
                 })
                 
-                callback(symbols)
+                callback(.success(symbols))
             }
             })
 

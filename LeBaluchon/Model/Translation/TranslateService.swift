@@ -18,7 +18,10 @@ class TranslateService {
         self.sessionTranslation = sessionTranslation
     }
     
-    func translationRequest(text: String, target: String, source: String, callback: @escaping (Bool, TranslateData?) -> Void) { //Formater string pour le navigateur avec url
+    
+    
+    func translationRequest(text: String, target: String, source: String, callback: @escaping (Bool, TranslateData?) -> Void) {
+        
         guard let textEncoded = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
         guard let translateURL = URL(string: "https://www.googleapis.com/language/translate/v2?key=AIzaSyBKuHgCc35F06OCKRw09-yUEjdTbO4lBTw&format=text&q=\(textEncoded)&source=\(source)&target=\(target)") else { return }
         

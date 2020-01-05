@@ -11,8 +11,9 @@ import UIKit
 class TranslationViewController: UIViewController {
     
     let translateService = TranslateService()
-    var text = ""
-    
+    var source = "FR"
+    var target = "EN"
+    var isReversed = false
    
     
     @IBOutlet weak var entryTextView: UITextView!
@@ -28,15 +29,20 @@ class TranslationViewController: UIViewController {
        
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func translateButtonTapped(_ sender: UIButton) {
-//        translateService.translateText(text: text, url: URL)
-        translateService.translationRequest(text: text, target: "TR", source: "FR") { (success, translateData) in
+        translateService.translationRequest(text: entryTextView.text!, target: target, source: source) { (success, translateData) in
             if success {
                 guard let translateData = translateData else { return }
+                print(translateData)
                 DispatchQueue.main.async {
+                    
                     self.translatedLabel.text = translateData.data.translations[0].translatedText
-                    self.text = self.entryTextView.text
-                    self.translatedLabel.reloadInputViews()
+                    
+                   
                 }
                 
                 
@@ -44,6 +50,25 @@ class TranslationViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func exchangeButtonTapped(_ sender: UIButton) {
+        isReversed.toggle()
+        
+        switch isReversed {
+        case true:
+            sourceLanguageButton.setTitle("English", for: .normal)
+            targetLanguageButton.setTitle("French", for: .normal)
+            source = "EN"
+            target = "FR"
+        case false:
+            sourceLanguageButton.setTitle("French", for: .normal)
+            targetLanguageButton.setTitle("English", for: .normal)
+            source = "FR"
+            target = "EN"
+        }
+        
+    }
+    
     
 }
 

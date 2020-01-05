@@ -200,11 +200,14 @@
                                         <state key="normal" image="Exchange">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="exchangeButtonTapped:" destination="Pv5-CD-yrA" eventType="touchUpInside" id="kah-ty-4v0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR8-Ak-lQL">
                                         <rect key="frame" x="233.33333333333334" y="0.0" width="101.66666666666666" height="50"/>
                                         <color key="backgroundColor" red="0.25423862429999999" green="0.69397905609999999" blue="0.32299395310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Turc">
+                                        <state key="normal" title="Anglais">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
