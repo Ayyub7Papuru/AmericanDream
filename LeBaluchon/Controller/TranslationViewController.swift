@@ -25,12 +25,14 @@ class TranslationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
+        view.addGestureRecognizer(tap)
        
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    @objc func DismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func translateButtonTapped(_ sender: UIButton) {
