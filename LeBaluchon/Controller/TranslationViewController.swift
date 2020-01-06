@@ -26,29 +26,29 @@ class TranslationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
        
     }
     
-    @objc func DismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
     @IBAction func translateButtonTapped(_ sender: UIButton) {
-        translateService.translationRequest(text: entryTextView.text!, target: target, source: source) { (success, translateData) in
-            if success {
-                guard let translateData = translateData else { return }
+        translateService.translationRequest(text: entryTextView.text!, target: target, source: source) { (result) in
+
+            switch result {
+            case .success(let translateData):
                 print(translateData)
                 DispatchQueue.main.async {
                     
                     self.translatedLabel.text = translateData.data.translations[0].translatedText
                     
-                   
+                    
                 }
-                
-                
-                
+            case .failure(_ ):
+                print("error")
             }
         }
     }

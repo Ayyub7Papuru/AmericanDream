@@ -20,7 +20,7 @@ class TranslateService {
     
     
     
-    func translationRequest(text: String, target: String, source: String, callback: @escaping (Bool, TranslateData?) -> Void) {
+    func translationRequest(text: String, target: String, source: String, callback: @escaping (Result<TranslateData, Error>) -> Void) {
         
         guard let textEncoded = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
         guard let translateURL = URL(string: "https://www.googleapis.com/language/translate/v2?key=AIzaSyBKuHgCc35F06OCKRw09-yUEjdTbO4lBTw&format=text&q=\(textEncoded)&source=\(source)&target=\(target)") else { return }
@@ -30,22 +30,22 @@ class TranslateService {
         
         task = sessionTranslation.dataTask(with: translateURL, completionHandler: { (data, response, error) in
             guard let data = data, error == nil else {
-                callback(false, nil)
+                callback(.failure(NetWorkError.noData))
                 return
             }
             print(data)
             
             guard let response = response  as? HTTPURLResponse, response.statusCode == 200 else {
-                callback(false, nil)
+                callback(.failure(NetWorkError.noResponse))
                 return
             }
             
             guard let responseJSON = try? JSONDecoder().decode(TranslateData.self, from: data) else {
-                callback(false, nil)
+                callback(.failure(NetWorkError.noDecode))
                 return
             }
             
-            callback(true, responseJSON.self)
+            callback(.success(responseJSON.self))
         })
         
         task?.resume()

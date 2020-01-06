@@ -66,7 +66,7 @@ class CurrencyService {
         task?.resume()
     }
     
-    func getRates(currency: String, callback: @escaping (Bool, [String: Double]?) -> Void) {
+    func getRates(currency: String, callback: @escaping (Result<[String: Double], Error>) -> Void) {
         guard let ratesURL = URL(string: "http://data.fixer.io/api/latest?access_key=9954839ad756dc9d57ee72e16510a446&base=EUR&symbols=\(currency)") else {return}
         
         task?.cancel()
@@ -74,21 +74,21 @@ class CurrencyService {
         task = sessionRates.dataTask(with: ratesURL, completionHandler: { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
-                    callback(false, nil)
+                    callback(.failure(NetWorkError.noData))
                     return
                 }
                 
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    callback(false, nil)
+                    callback(.failure(NetWorkError.noResponse))
                     return
                 }
                 
                 guard let responseJSON = try? JSONDecoder().decode(Rates.self, from: data) else {
-                    callback(false, nil)
+                    callback(.failure(NetWorkError.noDecode))
                     return
                 }
                 
-                callback(true, responseJSON.rates)
+                callback(.success(responseJSON.rates))
             }
             
         })

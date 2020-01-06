@@ -35,18 +35,17 @@ class CurrenciesViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     @IBAction func convertButton(_ sender: UIButton) {
-        currencyService.getRates(currency: currency) { (success, rates) in
-            if success {
-                
-                guard let rates = rates else { return }
+        currencyService.getRates(currency: currency) { (result) in
+            switch result {
+            case .success(let rates):
                 guard let stringAmount = self.moneyAmountTextField.text else { return }
                 guard let amount = Double(stringAmount) else { return }
                 guard let rate = rates[self.currency] else { return }
                 let result = amount * rate
                 self.resultLabel.text = String("\(result)")
-    
+            case .failure(_ ):
+                print("error") //Alerte
             }
-            
         }
     }
 
