@@ -92,8 +92,10 @@ class WeatherTestCase: XCTestCase {
             
             let name = "New York"
             let temp = 4.06
-            let weatherIncorrectData = "error".data(using: .utf8)!
+           
             XCTAssertNotNil(results)
+            XCTAssertEqual(name, results.list[0].name)
+            XCTAssertEqual(temp, results.list[0].main.temp)
 //            XCTAssertEqual(name, WeatherData.init(list: [List.init(weather: [Weather], main: .init(temp: 4.06), name: "New York")]))
 
             expectation.fulfill()

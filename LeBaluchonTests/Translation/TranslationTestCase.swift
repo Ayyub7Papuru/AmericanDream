@@ -87,5 +87,20 @@ class TranslationTestCase: XCTestCase {
                     })
                     wait(for: [expectation], timeout: 0.01)
                 }
+    
+    func testGetTranslationShouldPostFailedCallbackIfIncorrectDataAndGoodResponse() {
+        let translation = TranslateService(sessionTranslation: URLSessionFake(data: FakeResponseData.translationIncorrectData, response: FakeResponseData.responseOK, error: nil))
+        
+        let expectation = XCTestExpectation(description: "waiting for queue change")
+        translation.translationRequest(text: "", target: "", source: "", callback: { (result) in
+            guard case .failure(let error) = result else {
+                XCTFail("Test request method with an error failed.")
+                return
+            }
+            XCTAssertNotNil(error)
+            expectation.fulfill()
+        })
+        wait(for: [expectation], timeout: 0.01)
+    }
 
 }

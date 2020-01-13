@@ -140,4 +140,20 @@ class CurrencyServiceTestCase: XCTestCase {
         
         wait(for: [expectation], timeout: 0.01)
     }
+    
+    func testGetRatesShouldPostSuccessCallbackIfCorrectDataAndCorrectResponse() {
+        let currencyService = CurrencyService(sessionSymbols: URLSessionFake(data: FakeResponseData.ratesCorrectData, response: FakeResponseData.responseOK, error: nil), sessionRates: URLSessionFake(data: FakeResponseData.ratesCorrectData, response: FakeResponseData.responseOK, error: nil))
+        
+        let expectation = XCTestExpectation(description: "waiting for queue change")
+        currencyService.getRates(currency: "USD", callback: { (result) in
+                guard case .success(let results) = result else {
+                XCTFail("Test request method with an error failed.")
+                return
+            }
+            XCTAssertNotNil(results)
+            expectation.fulfill()
+        })
+        
+        wait(for: [expectation], timeout: 0.01)
+    }
 }

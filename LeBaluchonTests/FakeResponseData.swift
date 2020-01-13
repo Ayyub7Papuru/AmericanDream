@@ -28,6 +28,13 @@ class FakeResponseData {
         return data
     }
     
+    static var ratesCorrectData: Data {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "Rates", withExtension: "json")
+        let data = try! Data(contentsOf: url!)
+        return data
+    }
+    
    static var translationCorrectData: Data {
         let bundle = Bundle(for: FakeResponseData.self)
         let url = bundle.url(forResource: "Translation", withExtension: "json")
