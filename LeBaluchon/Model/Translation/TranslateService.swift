@@ -8,11 +8,10 @@
 
 import Foundation
 
-class TranslateService {
+final class TranslateService {
     
-    
-    var sessionTranslation: URLSession
-    var task: URLSessionTask?
+    private let sessionTranslation: URLSession
+    private var task: URLSessionTask?
     
     init(sessionTranslation: URLSession = URLSession(configuration: .default)) {
         self.sessionTranslation = sessionTranslation
@@ -24,8 +23,6 @@ class TranslateService {
         
         guard let textEncoded = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
         guard let translateURL = URL(string: "https://www.googleapis.com/language/translate/v2?key=AIzaSyBKuHgCc35F06OCKRw09-yUEjdTbO4lBTw&format=text&q=\(textEncoded)&source=\(source)&target=\(target)") else { return }
-        
-       
         task?.cancel()
         
         task = sessionTranslation.dataTask(with: translateURL, completionHandler: { (data, response, error) in
@@ -33,7 +30,6 @@ class TranslateService {
                 callback(.failure(NetWorkError.noData))
                 return
             }
-            print(data)
             
             guard let response = response  as? HTTPURLResponse, response.statusCode == 200 else {
                 callback(.failure(NetWorkError.noResponse))
@@ -49,7 +45,7 @@ class TranslateService {
         })
         
         task?.resume()
-
+        
     }
-
+    
 }

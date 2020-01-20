@@ -11,34 +11,19 @@ import Foundation
 
 
 // MARK: - Translate
+
 struct TranslateData: Decodable {
     let data: DataClass
 }
 
 // MARK: - DataClass
+
 struct DataClass: Decodable {
     let translations: [Translation]
 }
 
 // MARK: - Translation
+
 struct Translation: Decodable {
     let translatedText: String
 }
-
-
-//// MARK: - Detection
-//struct Detect: Decodable {
-//    let data: DataClass
-//}
-//
-//// MARK: - DataClass
-//struct DataClass: Decodable {
-//    let detections: [[Detection]]
-//}
-//
-//// MARK: - Detection
-//struct Detection: Decodable {
-//    let confidence: Int
-//    let isReliable: Bool
-//    let language: String
-//}

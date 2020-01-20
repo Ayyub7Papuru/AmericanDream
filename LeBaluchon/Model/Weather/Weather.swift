@@ -9,11 +9,13 @@
 import Foundation
 
 // MARK: - Welcome
+
 struct WeatherData: Decodable {
     let list: [List]
 }
 
 // MARK: - List
+
 struct List: Decodable {
     let weather: [Weather]
     let main: Main
@@ -21,11 +23,13 @@ struct List: Decodable {
 }
 
 // MARK: - Main
+
 struct Main: Decodable {
     let temp: Double
 }
 
 // MARK: - Weather
+
 struct Weather: Decodable {
     let description: String
 }

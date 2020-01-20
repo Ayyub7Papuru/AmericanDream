@@ -70,9 +70,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mLq-0S-BpL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="17"/>
-                                <state key="normal" title="CONVERT">
-                                    <color key="titleColor" red="0.19215840100000001" green="0.19215402009999999" blue="0.19215700029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="27"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="convertButton:" destination="Aei-Nw-klm" eventType="touchUpInside" id="xj4-zH-dS3"/>
@@ -123,6 +123,10 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="OHo-zD-XB5">
+                                <rect key="frame" x="177" y="679" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.27138101956263416" green="0.27138101956263416" blue="0.27138101956263416" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -141,6 +145,7 @@
                     <navigationItem key="navigationItem" title="Currencies" id="pNg-er-GJo"/>
                     <connections>
                         <outlet property="currenciesPickerView" destination="hdY-O6-GEl" id="pzG-wG-ngK"/>
+                        <outlet property="currencyActivityIndicator" destination="OHo-zD-XB5" id="AC6-2E-nqK"/>
                         <outlet property="moneyAmountTextField" destination="E0d-ym-Eui" id="kiJ-NC-DNr"/>
                         <outlet property="resultLabel" destination="0KD-m4-iVS" id="Yfq-zf-OlV"/>
                     </connections>
@@ -190,6 +195,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plp-KL-tog">
                                         <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="50"/>
                                         <color key="backgroundColor" red="0.25423862429999999" green="0.69397905609999999" blue="0.32299395310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                         <state key="normal" title="Français">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -207,6 +213,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR8-Ak-lQL">
                                         <rect key="frame" x="233.33333333333334" y="0.0" width="101.66666666666666" height="50"/>
                                         <color key="backgroundColor" red="0.25423862429999999" green="0.69397905609999999" blue="0.32299395310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
                                         <state key="normal" title="Anglais">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -237,9 +244,9 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBb-0b-94N">
-                                <rect key="frame" x="20" y="664" width="335" height="45"/>
+                                <rect key="frame" x="20" y="662" width="335" height="47"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.69411764710000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="27"/>
                                 <state key="normal" title="Translate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -247,8 +254,15 @@
                                     <action selector="translateButtonTapped:" destination="Pv5-CD-yrA" eventType="touchUpInside" id="bih-el-TnZ"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="oCb-Qg-FcJ">
+                                <rect key="frame" x="177" y="675" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.2713810196" green="0.2713810196" blue="0.2713810196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.25490196079999999" green="0.69411764710000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Axu-hj-235" firstAttribute="leading" secondItem="k9R-jR-qMe" secondAttribute="leading" constant="20" id="BKN-YC-kbE"/>
                             <constraint firstItem="hBb-0b-94N" firstAttribute="leading" secondItem="k9R-jR-qMe" secondAttribute="leading" constant="20" id="HxZ-hr-5o4"/>
@@ -268,6 +282,7 @@
                         <outlet property="exchangeLanguageButton" destination="sRb-79-hUo" id="MLJ-uM-dxS"/>
                         <outlet property="sourceLanguageButton" destination="plp-KL-tog" id="MJt-f1-Vit"/>
                         <outlet property="targetLanguageButton" destination="AR8-Ak-lQL" id="zpe-Mj-4xq"/>
+                        <outlet property="translateActivityIndicator" destination="oCb-Qg-FcJ" id="66a-Nj-7K3"/>
                         <outlet property="translatedLabel" destination="syG-bm-398" id="FYt-zt-nfK"/>
                     </connections>
                 </viewController>

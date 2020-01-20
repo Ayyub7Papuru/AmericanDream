@@ -14,20 +14,20 @@ enum NetWorkError: Error {
     case noDecode
 }
 
-class CurrencyService {
+final class CurrencyService {
     
     private let currenciesURL = URL(string: "http://data.fixer.io/api/symbols?access_key=9954839ad756dc9d57ee72e16510a446")
-   
-    var sessionRates = URLSession(configuration: .default)
-    var sessionSymbols = URLSession(configuration: .default)
+    
+    private let sessionRates: URLSession
+    private let sessionSymbols: URLSession
     init(sessionSymbols: URLSession = URLSession(configuration: .default), sessionRates: URLSession = URLSession(configuration: .default)) {
         self.sessionSymbols = sessionSymbols
         self.sessionRates = sessionRates
     }
     
-    var task: URLSessionTask?
+   private var task: URLSessionTask?
     
-
+    
     
     func getCurrencies(callback: @escaping (Result<[String], Error>) -> Void) {
         guard let currenciesURL = currenciesURL else { return }
@@ -60,9 +60,9 @@ class CurrencyService {
                 
                 callback(.success(symbols))
             }
-            })
-
-
+        })
+        
+        
         task?.resume()
     }
     
@@ -72,7 +72,6 @@ class CurrencyService {
         task?.cancel()
         
         task = sessionRates.dataTask(with: ratesURL, completionHandler: { (data, response, error) in
-            DispatchQueue.main.async {
                 guard let data = data, error == nil else {
                     callback(.failure(NetWorkError.noData))
                     return
@@ -89,7 +88,6 @@ class CurrencyService {
                 }
                 
                 callback(.success(responseJSON.rates))
-            }
             
         })
         task?.resume()
