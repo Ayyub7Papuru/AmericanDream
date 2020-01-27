@@ -45,8 +45,6 @@
 /* Begin PBXFileReference section */
 		B105394C2398195700E0529B /* TranslateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateService.swift; sourceTree = "<group>"; };
 		B14B16C923C232BF004A9E5A /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
-		B14B16D123C23580004A9E5A /* LeBaluchonTestsProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeBaluchonTestsProgram.swift; sourceTree = "<group>"; };
-		B14B16D323C23580004A9E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B14B16DD23C235A8004A9E5A /* LeBaluchonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBaluchonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14B16E123C235A8004A9E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B14B16E923C23607004A9E5A /* CurrencyServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyServiceTestCase.swift; sourceTree = "<group>"; };
@@ -120,15 +118,6 @@
 			path = Translation;
 			sourceTree = "<group>";
 		};
-		B14B16D023C23580004A9E5A /* LeBaluchonTestsProgram */ = {
-			isa = PBXGroup;
-			children = (
-				B14B16D123C23580004A9E5A /* LeBaluchonTestsProgram.swift */,
-				B14B16D323C23580004A9E5A /* Info.plist */,
-			);
-			path = LeBaluchonTestsProgram;
-			sourceTree = "<group>";
-		};
 		B14B16DE23C235A8004A9E5A /* LeBaluchonTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				B152BCC7232A564E00CC9216 /* LeBaluchon */,
-				B14B16D023C23580004A9E5A /* LeBaluchonTestsProgram */,
 				B14B16DE23C235A8004A9E5A /* LeBaluchonTests */,
 				B152BCC6232A564E00CC9216 /* Products */,
 			);
